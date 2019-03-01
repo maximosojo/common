@@ -1,0 +1,22 @@
+{
+  "name": "maxtoan/common",
+  "type": "symfony-bundle",
+  "description": "Common",
+  "keywords": ["common", "php"],
+  "homepage": "https://maxtoan.github.io/common",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+        {
+            "name": "Máximo Sojo",
+            "email": "maxsojo13@gmail.com"
+        }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+      "php": ">=5.3.2"
+  },
+  "autoload": {
+      "psr-4": { "Maxtoan\\Common\\": "" }
+  }
+}
