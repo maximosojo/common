@@ -12,11 +12,11 @@
 namespace Maxtoan\Common\Util;
 
 /**
- * TokenGenerator
+ * TokenUtil
  * 
  * @author Máximo Sojo <maxsojo13@gmail.com>
  */
-class TokenGenerator
+class TokenUtil
 {
     /**
      * Generador de token
@@ -24,7 +24,7 @@ class TokenGenerator
      * @author Máximo Sojo <maxsojo13@gmail.com>
      * @return Token
      */
-    public function generateToken()
+    public function generate()
     {
         return rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
     }
