@@ -32,7 +32,7 @@ class StringUtil
      * @param string $thousands_sep [Separador para los millares.]
      * @return number_format
      */
-    public static function numberFormat($number, int $decimals = self::SCALE_DECIMAL, string $dec_point = "," , string $thousands_sep = ".")
+    public static function numberFormat($number, $decimals = self::SCALE_DECIMAL, $dec_point = "," , $thousands_sep = ".")
     {
         $number = number_format($number,$decimals,$dec_point,$thousands_sep);
 
