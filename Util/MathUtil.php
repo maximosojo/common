@@ -21,7 +21,7 @@ class MathUtil
     /**
      * Escala por defecto para formatear a decimales
      */
-    const SCALE_DECIMAL = 2;
+    const SCALE_DECIMAL = 9;
     
     /**
      * Suma dos numeros decimales
