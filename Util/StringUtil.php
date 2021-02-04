@@ -324,4 +324,17 @@ class StringUtil
         $string = pack("C*",...$ascii);
         return $string;
     }
+
+    /**
+     * Limpia solo los caracteres pasados en la variable $forbidden_chars_to_replace
+     * @param type $str
+     * @param type $newstr
+     * @param array $forbidden_chars_to_replace
+     * @return type
+     */
+    public static function clearSpecialChars($str, $newstr = ' ', array $forbidden_chars_to_replace)
+    {
+        $forbidden_chars_to_remove = array();
+        return str_replace($forbidden_chars_to_replace, $newstr, str_replace($forbidden_chars_to_remove, "", $str));
+    }
 }
