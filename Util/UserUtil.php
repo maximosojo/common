@@ -108,4 +108,30 @@ class UserUtil
 
         return $nroPhone;
     }
+
+    /**
+     * ¿Es un nombre de usuario valido?
+     * @param type $str
+     * @return type
+     */
+    public static function isValidUsername($str)
+    {
+        if(empty($str)){
+            return false;
+        }
+        return StringUtil::validCharacters($str,self::EXP_VALID_USERNAME);
+    }
+
+    /**
+     * ¿Es un nombre de usuario valido para registrar?
+     * @param type $str
+     * @return type
+     */
+    public static function isValidUsernameCreate($str)
+    {
+        if(empty($str)){
+            return false;
+        }
+        return StringUtil::validCharacters($str,self::EXP_USERNAME_CREATE);
+    }
 }
