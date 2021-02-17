@@ -33,6 +33,21 @@ class Tools
     }
 
     /**
+     * Protege el email con asteriscos
+     * @param type $toConvert
+     * @return type
+     */
+    public static function asterisksEmail($toConvert) 
+    {
+        $dataConvert = explode("@",$toConvert);
+        $lastDigits = 4;
+        $mask = "******";
+        $lengthString = strlen($dataConvert[0]);
+        $digitsNo = substr($dataConvert[0], ($lengthString-$lastDigits), $lengthString);
+        return sprintf("%s%s@%s",$mask,$digitsNo,$dataConvert[1]);
+    }
+
+    /**
      * Protege la cuenta bancaria con asteriscos
      * @param type $toConvert
      * @return type
