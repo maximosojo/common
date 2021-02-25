@@ -40,11 +40,11 @@ class Tools
     public static function asterisksEmail($toConvert) 
     {
         $dataConvert = explode("@",$toConvert);
-        $lastDigits = 4;
+        $lastDigits = 8;
         $mask = "******";
         $lengthString = strlen($dataConvert[0]);
-        $digitsNo = substr($dataConvert[0], ($lengthString-$lastDigits), $lengthString);
-        return sprintf("%s%s@%s",$mask,$digitsNo,$dataConvert[1]);
+        $digitsNo = substr($dataConvert[0], 0, ($lengthString-$lastDigits));
+        return sprintf("%s%s@%s",$digitsNo,$mask,$dataConvert[1]);
     }
 
     /**
