@@ -86,7 +86,7 @@ class UserUtil
     {
         $phoneUtil = \libphonenumber\PhoneNumberUtil::getInstance();
         if(!$types) {
-            $types = [\libphonenumber\PhoneNumberType::MOBILE];
+            $types = [\libphonenumber\PhoneNumberType::MOBILE,\libphonenumber\PhoneNumberType::FIXED_LINE_OR_MOBILE];
         }
         try {
             $swissNumberProto = $phoneUtil->parse($nroPhone,$country);
